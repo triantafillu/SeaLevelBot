@@ -57,8 +57,10 @@ async def year_func(ms: types.Message):
         #Check whether the number is less than 1880
         elif(int(ms.text)<1880):
             await ms.reply(less_than_message)
+        elif (int(ms.text) > 4000):
+            await ms.reply(too_big_message)
         # Check whether the number is valis as a year
-        elif (int(ms.text)>=1880):
+        elif (int(ms.text)>=1880 and int(ms.text)<=4000):
             #Generate the plot
             level = slp.draw_plot(int(ms.text))
             caption_message = text("Here is your plot\!",

@@ -49,3 +49,5 @@ less_than_message = "Sorry, there's no data before 1880"
 notnumeric_message = "Sorry, this isn't a year"
 
 starts_with_zero_message = "Sorry, the year isn't supposed to start with zero"
+
+too_big_message = "Sorry, this plot won't make sense\. Please choose a year before 4000\."
