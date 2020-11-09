@@ -10,7 +10,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 TOKEN = '1463776929:AAF9xdulEOKucqjWjYzseWF3qyAIGkNr_ok'
 PROJECT_NAME = 'young-citadel-27894'
 
-WEBHOOK_HOST = f'https://{PROJECT_NAME}.herokuapp.com/'  # Enter here your link from Heroku project settings
+WEBHOOK_HOST = f'https://{PROJECT_NAME}.herokuapp.com/'
 WEBHOOK_URL_PATH = '/webhook/' + TOKEN
 WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_URL_PATH)
 
