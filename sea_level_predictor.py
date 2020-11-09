@@ -3,15 +3,17 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from scipy.stats import linregress
+# Read data from file
+df = pd.read_csv('epa-sea-level.csv')
+df['Year'] = pd.DatetimeIndex(df['Date']).year
 
+# Data frame with the only columns we need
+df1 = df[['Year', 'CSIRO Adjusted Sea Level']].copy()
+
+# Create second data frame (select years 2000-year)
+df2 = df1[df1['Year'] > 1999].copy()
 
 def draw_plot(year):
-    # Read data from file
-    df = pd.read_csv('epa-sea-level.csv')
-    df['Year'] = pd.DatetimeIndex(df['Date']).year
-
-    # Data frame with the only columns we need
-    df1 = df[['Year', 'CSIRO Adjusted Sea Level']].copy()
 
     # Create line plot from the original data
     sns.set_theme(color_codes=True)
@@ -26,9 +28,6 @@ def draw_plot(year):
 
     # Plot the first line
     plt.plot(years_extended_1, first_line, 'lightcoral', label='regression line (from 1880)')
-
-    # Create second data frame (select years 2000-year)
-    df2 = df1[df1['Year'] > 1999].copy()
 
     # Create the distribution for the years in future (2000-year)
     years_extended_2 = np.arange(2000, year, 1)
