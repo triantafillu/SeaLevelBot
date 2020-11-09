@@ -22,7 +22,7 @@ BAD_CONTENT = ContentTypes.PHOTO & ContentTypes.DOCUMENT & ContentTypes.STICKER 
 loop = asyncio.get_event_loop()
 bot = Bot(token=TOKEN, parse_mode = "markdownv2")
 storage = MemoryStorage()
-dp = Dispatcher(bot)
+dp = Dispatcher(bot, storage = storage)
 logging.basicConfig(format=u'%(filename)s [ LINE:%(lineno)+3s ]#%(levelname)+8s [%(asctime)s]  %(message)s',
                     level=logging.INFO)
 
