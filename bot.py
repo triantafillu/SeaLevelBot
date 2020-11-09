@@ -8,7 +8,7 @@ from aiogram.utils.executor import start_webhook
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 TOKEN = '1463776929:AAF9xdulEOKucqjWjYzseWF3qyAIGkNr_ok'
-PROJECT_NAME = 'vast-meadow-65542'
+PROJECT_NAME = 'young-citadel-27894'
 
 WEBHOOK_HOST = f'https://{PROJECT_NAME}.herokuapp.com/'  # Enter here your link from Heroku project settings
 WEBHOOK_URL_PATH = '/webhook/' + TOKEN
